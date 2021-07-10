@@ -1,5 +1,7 @@
 package com.semenov.movie_list;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,6 +41,21 @@ public class Movie_Adapter extends RecyclerView.Adapter<Movie_Adapter.MovieViewH
         public MovieViewHolder(View itemView) {
             super(itemView);
             textView = (TextView) itemView.findViewById(R.id.desc);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+                    int position = getAdapterPosition();
+
+                    Context context = v.getContext();
+                    Intent intent = new Intent(context, GenresActivity.class);
+                    intent.putExtra("main_key", movie_lists.get(position).getMovie());
+                    context.startActivity(intent);
+                }
+            });
         }
+
+
     }
 }
