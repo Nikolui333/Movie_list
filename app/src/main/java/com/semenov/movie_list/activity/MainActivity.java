@@ -1,10 +1,14 @@
-package com.semenov.movie_list;
+package com.semenov.movie_list.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+
+import com.semenov.movie_list.adapters.Main_Adapter;
+import com.semenov.movie_list.MainList;
+import com.semenov.movie_list.R;
 
 import java.util.ArrayList;
 
@@ -20,13 +24,13 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.recycler_View);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        ArrayList<Movie_list> movie_lists = new ArrayList<>();
+        ArrayList<MainList> movie_lists = new ArrayList<>();
 
-        movie_lists.add(new Movie_list("Фильмы"));
-        movie_lists.add(new Movie_list("Сериалы"));
-        movie_lists.add(new Movie_list("Мультфильмы"));
+        movie_lists.add(new MainList("Фильмы"));
+        movie_lists.add(new MainList("Сериалы"));
+        movie_lists.add(new MainList("Мультфильмы"));
 
-        Movie_Adapter movie_adapter = new Movie_Adapter(movie_lists);
+        Main_Adapter movie_adapter = new Main_Adapter(movie_lists);
         recyclerView.setAdapter(movie_adapter);
     }
 }

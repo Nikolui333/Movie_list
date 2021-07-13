@@ -1,4 +1,4 @@
-package com.semenov.movie_list;
+package com.semenov.movie_list.adapters;
 
 import android.content.Context;
 import android.content.Intent;
@@ -10,13 +10,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.semenov.movie_list.MainList;
+import com.semenov.movie_list.R;
+import com.semenov.movie_list.activity.GenresActivity;
+
 import java.util.ArrayList;
 
-public class Movie_Adapter extends RecyclerView.Adapter<Movie_Adapter.MovieViewHolder> {
+public class Main_Adapter extends RecyclerView.Adapter<Main_Adapter.MovieViewHolder> {
 
-    ArrayList<Movie_list> movie_lists;
+    ArrayList<MainList> movie_lists;
 
-    public Movie_Adapter(ArrayList<Movie_list> movie_lists) {
+    public Main_Adapter(ArrayList<MainList> movie_lists) {
         this.movie_lists = movie_lists;
     }
 
@@ -27,7 +31,7 @@ public class Movie_Adapter extends RecyclerView.Adapter<Movie_Adapter.MovieViewH
     }
 
     @Override
-    public void onBindViewHolder(@NonNull Movie_Adapter.MovieViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull Main_Adapter.MovieViewHolder holder, int position) {
         holder.textView.setText(movie_lists.get(position).getMovie());
     }
 

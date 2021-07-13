@@ -1,10 +1,10 @@
 package com.semenov.movie_list;
 
-public class Movie_list {
+public class MainList {
 
     String movie;
 
-    public Movie_list(String movie) {
+    public MainList(String movie) {
         this.movie = movie;
     }
 

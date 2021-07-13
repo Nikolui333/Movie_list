@@ -1,4 +1,4 @@
-package com.semenov.movie_list;
+package com.semenov.movie_list.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.semenov.movie_list.R;
 
 import java.util.ArrayList;
 import java.util.List;
